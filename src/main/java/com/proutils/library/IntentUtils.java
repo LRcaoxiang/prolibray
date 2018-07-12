@@ -18,7 +18,6 @@ import java.io.File;
 public class IntentUtils {
 
     /**
-     * 通过类名启动Activity
      *
      * @param pClass
      */
@@ -27,7 +26,6 @@ public class IntentUtils {
     }
 
     /**
-     * 通过类名启动Activity，并且含有Bundle数据
      *
      * @param pClass
      * @param pBundle
@@ -41,7 +39,6 @@ public class IntentUtils {
     }
 
     /**
-     * 通过Action启动Activity
      *
      * @param pAction
      */
@@ -50,7 +47,6 @@ public class IntentUtils {
     }
 
     /**
-     * 通过Action启动Activity，并且含有Bundle数据
      *
      * @param pAction
      * @param pBundle
@@ -64,7 +60,6 @@ public class IntentUtils {
     }
 
 
-    //7.0下载完成后跳转安装界面
     public static void goDownlInstall(Activity activity,File appFile){
         Intent intent = new Intent(Intent.ACTION_VIEW);
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
@@ -78,10 +73,6 @@ public class IntentUtils {
     }
 
 
-    /**
-     * 调用拨号界面
-     * @param phone 电话号码
-     */
     public static void call(Context context, String phone) {
         Intent intent = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:"+phone));
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);

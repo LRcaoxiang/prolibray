@@ -1,6 +1,7 @@
 package com.proutils.library;
 
 import android.app.Activity;
+import android.content.Context;
 import android.view.Gravity;
 import android.widget.Toast;
 
@@ -14,12 +15,11 @@ public class ToastUtil {
 
     private static Toast toast = null;
     /**
-     * 短时间显示Toast
+     * duan  Toast
      *
-     * @param info 显示的内容
+     * @param info
      */
-    public static void showToast(Activity activity,String info) {
-        //防止重复执行单一吐司操作
+    public static void showToast(Context activity, String info) {
         if (StringUtils.isEmpty(info))
             return;
         if (toast == null) {
@@ -30,11 +30,11 @@ public class ToastUtil {
         toast.show();
     }
     /**
-     * 短时间显示Toast显示在中间
+     * Long Toast
      *
-     * @param info 显示的内容
+     * @param info
      */
-    public static void showCenterToast(Activity activity,String info) {
+    public static void showCenterToast(Context activity,String info) {
         if (StringUtils.isEmpty(info))
             return;
         if (toast == null) {
@@ -48,11 +48,11 @@ public class ToastUtil {
 
 
     /**
-     * 长时间显示Toast
      *
-     * @param info 显示的内容
+     *
+     * @param info
      */
-    public static void showToastLong(Activity activity,String info) {
+    public static void showToastLong(Context activity,String info) {
         if (StringUtils.isEmpty(info))
             return;
         if (toast == null) {
@@ -64,9 +64,9 @@ public class ToastUtil {
     }
 
     /**
-     * 短时间显示Toast
+     *
      */
-    public static void showToast(Activity activity,int resId) {
+    public static void showToast(Context activity,int resId) {
         if (StringUtils.isEmpty(activity.getString(resId)))
             return;
         if (toast == null) {
@@ -78,9 +78,9 @@ public class ToastUtil {
     }
 
     /**
-     * 长时间显示Toast
+     *
      */
-    public static void showToastLong(Activity activity,int resId) {
+    public static void showToastLong(Context activity,int resId) {
         if (StringUtils.isEmpty(activity.getString(resId)))
             return;
         if (toast == null) {
