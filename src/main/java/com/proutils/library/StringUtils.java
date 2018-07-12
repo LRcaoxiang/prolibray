@@ -57,7 +57,6 @@ public class StringUtils {
             return string;
         }
         string = new SpannableString(addStr01 + count + addStr02);
-        //设置前景色
         ForegroundColorSpan colorSpan1 = new ForegroundColorSpan(Color.parseColor("#FF4444"));
         string.setSpan(colorSpan1, addStr01.length(), textLen, Spanned.SPAN_INCLUSIVE_EXCLUSIVE);
         return string;
@@ -283,15 +282,6 @@ public class StringUtils {
         } catch (Exception e) {
             return "";
         }
-    }
-
-    /**
-     *
-     * @param desc
-     * @return
-     */
-    public static String getDesc(String desc) {
-        return isEmpty(desc) ? "无" : desc;
     }
 
     /**
