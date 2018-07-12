@@ -25,7 +25,7 @@ android {
         artifactId = 'prolibray' // 改成你的 Library 名字（影响别人引用的第二段）
         publishVersion = '1.0' // 版本号 （影响别人引用的第三段）
         desc = 'Public use of the project,项目公共功能'
-        website = 'https://dl.bintray.com/lrcaoxiang/maven'
+        website = 'https://github.com/LRcaoxiang/prolibray.git'
     }
 }
 
