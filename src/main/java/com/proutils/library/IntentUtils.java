@@ -13,12 +13,13 @@ import java.io.File;
 
 /**
  * Created by lizhangfeng on 16/6/4.
- * description: 跳转utils
+ * description: go Class
  */
 public class IntentUtils {
 
     /**
      *
+     * @param context
      * @param pClass
      */
     public static void openActivity(Context context, Class<?> pClass) {
@@ -27,6 +28,7 @@ public class IntentUtils {
 
     /**
      *
+     * @param context
      * @param pClass
      * @param pBundle
      */
@@ -40,6 +42,7 @@ public class IntentUtils {
 
     /**
      *
+     * @param context
      * @param pAction
      */
     public void openActivity(Context context, String pAction) {
@@ -48,6 +51,7 @@ public class IntentUtils {
 
     /**
      *
+     * @param context thisushdihifhs
      * @param pAction
      * @param pBundle
      */
@@ -59,7 +63,11 @@ public class IntentUtils {
         context.startActivity(intent);
     }
 
-
+    /**
+     *
+     * @param activity
+     * @param appFile
+     */
     public static void goDownlInstall(Activity activity,File appFile){
         Intent intent = new Intent(Intent.ACTION_VIEW);
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
@@ -72,7 +80,11 @@ public class IntentUtils {
         }
     }
 
-
+    /**
+     *
+     * @param context
+     * @param phone  这里有中文
+     */
     public static void call(Context context, String phone) {
         Intent intent = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:"+phone));
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
